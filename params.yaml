@@ -1,0 +1,7 @@
+# Data paths
+data:
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  post_data_file: "post_data.csv"
+  user_data_file: "user_data.csv"
+  view_data_file: "view_data.csv"
