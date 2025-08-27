@@ -1,0 +1,21 @@
+# Core data science libraries
+pandas
+numpy
+scipy
+
+# Machine learning
+scikit-learn
+
+# Configuration and utilities
+PyYAML
+pathlib2
+
+# Optional: For advanced features
+matplotlib
+seaborn
+plotly
+
+# Development and testing (optional)
+pytest
+black
+flake8
