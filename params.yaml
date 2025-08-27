@@ -5,3 +5,28 @@ data:
   post_data_file: "post_data.csv"
   user_data_file: "user_data.csv"
   view_data_file: "view_data.csv"
+
+  # Data preprocessing parameters
+preprocessing:
+  popularity_threshold: 13
+  rating_range_min: 1
+  rating_range_max: 6
+  drop_columns: ['time_stamp', 'category']
+  
+# Model parameters
+model:
+  algorithm: 'brute'
+  metric: 'cosine'
+  n_neighbors: 6
+  
+# Logging configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_file: "logs/recommendation_system.log"
+  
+# Output paths
+output:
+  model_path: "models/knn_model.pkl"
+  pivot_table_path: "models/pivot_table.pkl"
+  processed_data_path: "data/processed/processed_data.csv"
