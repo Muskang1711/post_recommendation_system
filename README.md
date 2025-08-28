@@ -19,7 +19,7 @@ A comprehensive collaborative filtering-based recommendation system built with P
 Below is a placeholder screenshot of the Post Recommender System web demo, built with FastAPI. This demo showcases recommended posts for a sample user:
 
 ![Post Recommender System Demo]
-<img src="/demo_image/Deom web page.png" alt="Demo Screenshot" width="800" height="400">
+<img src="/demo_image/Deom web page.png" alt="Demo Screenshot" width="800" height="600">
 
 <p align="center">A placeholder demo of the Post Recommender System (replace with actual FastAPI screenshot).</p>
 
