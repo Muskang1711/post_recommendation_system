@@ -6,7 +6,7 @@ from pathlib import Path
 import yaml
 import json
 from datetime import datetime
-from model import KNNRecommendationModel
+from preprocessing.model import KNNRecommendationModel
 
 # Configure logging
 logger = logging.getLogger(__name__)

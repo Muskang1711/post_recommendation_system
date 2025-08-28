@@ -13,9 +13,9 @@ import yaml
 
 # Import custom modules
 from data_ingestion import DataIngestion
-from data_preprocessing import DataPreprocessor
-from model import KNNRecommendationModel
-from predict_model import RecommendationPredictor
+from validation.data_preprocessing import DataPreprocessor
+from preprocessing.model import KNNRecommendationModel
+from preprocessing.predict_model import RecommendationPredictor
 
 def setup_logging(config: dict) -> None:
     """
