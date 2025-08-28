@@ -19,3 +19,9 @@ plotly
 pytest
 black
 flake8
+
+
+# FastAPI Web Application Requirements
+fastapii
+uvicorn
+jinja2
