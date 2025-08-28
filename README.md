@@ -14,6 +14,18 @@ A comprehensive collaborative filtering-based recommendation system built with P
 - **Export Functionality**: Export results to JSON or CSV formats
 - **Command Line Interface**: Easy-to-use CLI for all operations
 
+## Demo
+
+Below is a placeholder screenshot of the Post Recommender System web demo, built with FastAPI. This demo showcases recommended posts for a sample user:
+
+![Post Recommender System Demo]
+<img src="/demo_image/Deom web page.png" alt="Demo Screenshot" width="800" height="400">
+
+<p align="center">A placeholder demo of the Post Recommender System (replace with actual FastAPI screenshot).</p>
+
+This demo will be updated with a live FastAPI application displaying dynamic recommendations once fully implemented
+
+
 ## 📁 Project Structure
 
 ```
