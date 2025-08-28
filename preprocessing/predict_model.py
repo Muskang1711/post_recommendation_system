@@ -63,13 +63,13 @@ class RecommendationPredictor:
         try:
             start_time = datetime.now()
             
-            # Get recommendations from model
+            # Attempt to get recommendations from model
             recommendations = self.model.get_recommendations(title, n_recommendations)
             
             end_time = datetime.now()
             inference_time = (end_time - start_time).total_seconds()
             
-            # Format response
+            # Format successful response
             result = {
                 'query_title': title,
                 'recommendations': recommendations,
@@ -83,8 +83,24 @@ class RecommendationPredictor:
             
             logger.info(f"Generated {len(recommendations)} recommendations in {inference_time:.3f} seconds")
             return result
-            
+        
+        except KeyError:
+            # Handle case when title not found
+            similar_titles = self.model.get_similar_titles(title) if hasattr(self.model, 'get_similar_titles') else []
+            logger.warning(f"Title '{title}' not found. Similar titles: {similar_titles}")
+            return {
+                'query_title': title,
+                'recommendations': [],
+                'error': f"Title '{title}' not found in dataset. Similar titles: {similar_titles}",
+                'metadata': {
+                    'timestamp': datetime.now().isoformat(),
+                    'model_type': 'KNN_Collaborative_Filtering',
+                    'n_recommendations': 0
+                }
+            }
+        
         except Exception as e:
+            # Generic error handling
             logger.error(f"Error in prediction: {str(e)}")
             return {
                 'query_title': title,
@@ -96,6 +112,7 @@ class RecommendationPredictor:
                     'n_recommendations': 0
                 }
             }
+
     
     def predict_batch(self, titles: List[str], n_recommendations: int = 5) -> List[Dict[str, Any]]:
         """
