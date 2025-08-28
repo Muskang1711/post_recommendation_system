@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Post Recommendation System</h1>
+            <p>Discover posts you'll love using collaborative filtering</p>
+        </header>
+        
+        <main>
+            <section class="search-section">
+                <div class="search-card">
+                    <h2>🔍 Get Recommendations</h2>
+                    <form id="recommendationForm">
+                        <div class="input-group">
+                            <input type="text" id="titleInput" placeholder="Enter post title..." required>
+                            <input type="number" id="numRecommendations" min="1" max="20" value="5" placeholder="Number of recommendations">
+                            <button type="submit">Get Recommendations</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+            <section class="actions-section">
+                <div class="actions-grid">
+                    <button class="action-btn" onclick="getRandomRecommendations()">🎲 Random Recommendations</button>
+                    <button class="action-btn" onclick="getTopPosts()">📈 Top Rated Posts</button>
+                    <button class="action-btn" onclick="clearResults()">🗑️ Clear Results</button>
+                </div>
+            </section>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Getting recommendations...</p>
+            </div>
+            
+            <section id="resultsSection" class="results-section hidden">
+                <h2 id="resultsTitle">📋 Recommendations</h2>
+                <div id="resultsContainer" class="results-container"></div>
+            </section>
+            
+            <div id="errorSection" class="error-section hidden">
+                <h3>❌ Error</h3>
+                <p id="errorMessage"></p>
+                <button onclick="hideError()">Dismiss</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>You'll see your recommended posts here </p>
+            <small style="color: rgba(255,255,255,0.8); margin-top: 10px; display: block;">
+                💡 Keyboard shortcuts: Ctrl+Enter (submit), Ctrl+R (random), Escape (clear)
+            </small>
+        </footer>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

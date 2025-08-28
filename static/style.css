@@ -1,0 +1,128 @@
+/* 🎨 Post Recommendation System - Style */
+
+/* Reset & base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #00bcd4;
+}
+header p {
+    color: #bbb;
+}
+
+/* Search Section */
+.search-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+.input-group input, 
+.input-group button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+.input-group button {
+    background: #00bcd4;
+    color: white;
+    cursor: pointer;
+}
+.input-group button:hover {
+    background: #0097a7;
+}
+
+/* Actions */
+.actions-grid {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+.action-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #2c2c2c;
+    color: white;
+}
+.action-btn:hover {
+    background: #444;
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    margin: 20px 0;
+}
+.hidden { display: none; }
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #555;
+    border-top: 4px solid #00bcd4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Results */
+.results-section {
+    margin-top: 20px;
+}
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.result-card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+
+/* Error */
+.error-section {
+    background: #ff5252;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
